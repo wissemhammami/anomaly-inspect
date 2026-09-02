@@ -48,10 +48,12 @@ jobs:
             -o good_response.json
           cat good_response.json
           python3 -c "
-          import json
+          import json, sys
           data = json.load(open('good_response.json'))
           print('anomaly_score:', data['anomaly_score'])
           print('is_anomalous:', data['is_anomalous'])
+          if data.get('is_anomalous') is not False:
+              sys.exit('expected good image to be non-anomalous')
           "
 
       - name: Predict on defect image
@@ -61,10 +63,12 @@ jobs:
             -o defect_response.json
           cat defect_response.json
           python3 -c "
-          import json
+          import json, sys
           data = json.load(open('defect_response.json'))
           print('anomaly_score:', data['anomaly_score'])
           print('is_anomalous:', data['is_anomalous'])
+          if data.get('is_anomalous') is not True:
+              sys.exit('expected defect image to be anomalous')
           "
 
       - name: Predict on invalid file
