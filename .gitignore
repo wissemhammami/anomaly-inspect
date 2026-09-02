@@ -1,0 +1,7 @@
+data/
+models/*.pt
+!models/resnet18_finetuned.pt
+!models/resnet18_finetuned_embeddings.pt
+!models/localization_stats.pt
+__pycache__/
+.venv/

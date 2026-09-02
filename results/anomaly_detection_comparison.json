@@ -1,0 +1,16 @@
+{
+  "frozen": {
+    "roc_auc": 0.9968,
+    "threshold": 701261.6849,
+    "accuracy": 0.988,
+    "mean_score_good": 433784.49,
+    "mean_score_defect": 9306043.1
+  },
+  "finetuned": {
+    "roc_auc": 0.9984,
+    "threshold": 6322925.3447,
+    "accuracy": 0.9759,
+    "mean_score_good": 3297646.57,
+    "mean_score_defect": 20816435.16
+  }
+}
