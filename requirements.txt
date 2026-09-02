@@ -5,7 +5,7 @@ pillow
 scikit-learn
 scipy
 matplotlib
-opencv-python
+opencv-python-headless
 fastapi
 uvicorn[standard]
 python-multipart
