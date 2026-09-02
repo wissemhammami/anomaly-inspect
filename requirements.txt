@@ -12,6 +12,3 @@ python-multipart
 mlflow
 pyyaml
 tqdm
-fastapi
-uvicorn[standard]
-python-multipart
