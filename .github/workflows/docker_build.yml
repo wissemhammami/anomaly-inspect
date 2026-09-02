@@ -1,0 +1,87 @@
+name: Docker Build and Validate
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t anomaly-inspect .
+
+      - name: Report image size
+        run: docker images anomaly-inspect
+
+      - name: Run container
+        run: docker run -d -p 8000:8000 --name anomaly-inspect-test anomaly-inspect
+
+      - name: Wait for health check
+        run: |
+          for i in $(seq 1 30); do
+            if curl -sf http://127.0.0.1:8000/health; then
+              echo "service is up"
+              exit 0
+            fi
+            echo "waiting for service..."
+            sleep 2
+          done
+          echo "service did not become healthy in time"
+          docker logs anomaly-inspect-test
+          exit 1
+
+      - name: Print container logs
+        run: docker logs anomaly-inspect-test
+
+      - name: Health check response
+        run: curl -s http://127.0.0.1:8000/health
+
+      - name: Predict on good image
+        run: |
+          curl -s -X POST http://127.0.0.1:8000/predict \
+            -F "file=@tests/fixtures/sample_good.png" \
+            -o good_response.json
+          cat good_response.json
+          python3 -c "
+          import json
+          data = json.load(open('good_response.json'))
+          print('anomaly_score:', data['anomaly_score'])
+          print('is_anomalous:', data['is_anomalous'])
+          "
+
+      - name: Predict on defect image
+        run: |
+          curl -s -X POST http://127.0.0.1:8000/predict \
+            -F "file=@tests/fixtures/sample_defect.png" \
+            -o defect_response.json
+          cat defect_response.json
+          python3 -c "
+          import json
+          data = json.load(open('defect_response.json'))
+          print('anomaly_score:', data['anomaly_score'])
+          print('is_anomalous:', data['is_anomalous'])
+          "
+
+      - name: Predict on invalid file
+        run: |
+          echo "not an image" > invalid.txt
+          status=$(curl -s -o invalid_response.json -w "%{http_code}" \
+            -X POST http://127.0.0.1:8000/predict \
+            -F "file=@invalid.txt")
+          echo "status: $status"
+          cat invalid_response.json
+          if [ "$status" != "400" ]; then
+            echo "expected 400, got $status"
+            exit 1
+          fi
+
+      - name: Cleanup
+        if: always()
+        run: |
+          docker stop anomaly-inspect-test || true
+          docker rm anomaly-inspect-test || true
