@@ -12,3 +12,4 @@ python-multipart
 mlflow
 pyyaml
 tqdm
+gradio
