@@ -4,7 +4,6 @@ numpy
 pillow
 scikit-learn
 scipy
+matplotlib
 opencv-python-headless
-fastapi
-uvicorn
-python-multipart
+gradio
