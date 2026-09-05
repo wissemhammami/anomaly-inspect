@@ -104,8 +104,8 @@ def padi_map_for_image(model, image_tensor, stats):
         out = model.layer2(out)
 
     feat = out[0].permute(1, 2, 0).reshape(-1, out.shape[1]).cpu().numpy()
-    mean = stats["mean"]
-    cov_inv = stats["cov_inv"]
+    mean = stats["mean"].astype(np.float32)
+    cov_inv = stats["cov_inv"].astype(np.float32)
     scores = np.zeros(feat.shape[0], dtype=np.float32)
     for pos in range(feat.shape[0]):
         diff = feat[pos] - mean[pos]

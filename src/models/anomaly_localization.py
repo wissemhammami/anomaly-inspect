@@ -132,7 +132,9 @@ print(f"pixel-level ROC-AUC: {pixel_auroc:.4f}")
 print(f"pixel-level PR-AUC:  {pixel_pr_auc:.4f}")
 
 torch.save({
-    "mean": mean, "cov_inv": cov_inv, "H": H, "W": W, "C": C,
+    "mean": mean.astype(np.float16),
+    "cov_inv": cov_inv.astype(np.float16),
+    "H": H, "W": W, "C": C,
     "pixel_auroc": pixel_auroc,
     "pixel_pr_auc": pixel_pr_auc,
 }, MODEL_PATH.parent / "localization_stats.pt")
