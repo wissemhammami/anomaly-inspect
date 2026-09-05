@@ -3,9 +3,6 @@ import os
 from pathlib import Path
 
 import cv2
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import torch.nn as nn
@@ -19,7 +16,6 @@ DATA_ROOT = PROJECT_ROOT / "data" / "bottle"
 MODEL_PATH = PROJECT_ROOT / "models" / "resnet18_finetuned.pt"
 STATS_PATH = PROJECT_ROOT / "models" / "localization_stats.pt"
 RESULTS_DIR = PROJECT_ROOT / "results" / "gradcam_examples"
-RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def load_image(path):
@@ -118,6 +114,12 @@ def padi_map_for_image(model, image_tensor, stats):
 
 
 def main():
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = load_model(device)
     gradcam = GradCAMAnomaly(model, str(STATS_PATH), device=device)
