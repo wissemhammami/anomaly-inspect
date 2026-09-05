@@ -1,16 +1,24 @@
 {
   "frozen": {
     "roc_auc": 0.9968,
-    "threshold": 701261.6849,
-    "accuracy": 0.988,
-    "mean_score_good": 433784.49,
-    "mean_score_defect": 9306043.1
+    "threshold": 1321111.6875,
+    "threshold_percentile": 95,
+    "accuracy": 0.9518,
+    "mean_score_good": 623923.52,
+    "mean_score_defect": 13044961.01,
+    "gaussian_fit_size": 167,
+    "threshold_calibration_size": 42,
+    "test_size": 83
   },
   "finetuned": {
-    "roc_auc": 0.9984,
-    "threshold": 6322925.3447,
-    "accuracy": 0.9759,
-    "mean_score_good": 3297646.57,
-    "mean_score_defect": 20816435.16
+    "roc_auc": 0.9952,
+    "threshold": 4954001.04,
+    "threshold_percentile": 95,
+    "accuracy": 0.9518,
+    "mean_score_good": 4139539.67,
+    "mean_score_defect": 20744874.65,
+    "gaussian_fit_size": 167,
+    "threshold_calibration_size": 42,
+    "test_size": 83
   }
 }

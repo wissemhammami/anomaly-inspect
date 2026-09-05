@@ -139,7 +139,7 @@ def main():
         padi_224 = cv2.resize(padi_norm, (224, 224), interpolation=cv2.INTER_LINEAR)
 
         sim = cosine_similarity(cam_norm, padi_224)
-        iou = iou_at_threshold(cam_norm, padi_224, threshold=0.5)
+        iou_vs_padi = iou_at_threshold(cam_norm, padi_224, threshold=0.5)
 
         mask = np.zeros((224, 224), dtype=np.uint8)
         if path.parent.name != "good":
@@ -149,10 +149,10 @@ def main():
         iou_metrics = {}
         if path.parent.name != "good":
             for threshold in (0.3, 0.5, 0.7):
-                iou_metrics[f"iou_at_{threshold}"] = iou_at_threshold(cam_norm, mask, threshold=threshold)
+                iou_metrics[f"iou_vs_gt_at_{threshold}"] = iou_at_threshold(cam_norm, mask, threshold=threshold)
         else:
             for threshold in (0.3, 0.5, 0.7):
-                iou_metrics[f"iou_at_{threshold}"] = None
+                iou_metrics[f"iou_vs_gt_at_{threshold}"] = None
 
         overlay = gradcam.overlay_on_image(img_arr, cam_norm)
         fig, axes = plt.subplots(1, 3, figsize=(15, 5))
@@ -173,16 +173,13 @@ def main():
             "image": str(path.relative_to(PROJECT_ROOT)),
             "defect_type": path.parent.name,
             "cosine_similarity": round(float(sim), 4),
-            "iou_at_0.5": round(float(iou), 4),
+            "iou_vs_padi_at_0.5": round(float(iou_vs_padi), 4),
         }
         for threshold, value in iou_metrics.items():
-            if value is None:
-                record[threshold] = None
-            else:
-                record[threshold] = round(float(value), 4)
+            record[threshold] = None if value is None else round(float(value), 4)
         agreement.append(record)
 
-    print("Grad-CAM vs PaDiM localization agreement")
+    print("Grad-CAM vs PaDiM/ground-truth localization agreement")
     for item in agreement:
         print(item)
 

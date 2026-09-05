@@ -1,3 +1,4 @@
+import os
 import torch
 import torch.nn as nn
 import torchvision.models as models
@@ -9,7 +10,7 @@ from torch.utils.data import Dataset, DataLoader
 IMAGENET_MEAN = np.array([0.485, 0.456, 0.406], dtype=np.float32)
 IMAGENET_STD = np.array([0.229, 0.224, 0.225], dtype=np.float32)
 IMG_SIZE = 224
-ROOT = "/kaggle/input/datasets/ipythonx/mvtec-ad/bottle"
+ROOT = os.environ.get("MVTEC_DATA_ROOT", "data/bottle")
 
 
 def load_image(path):
@@ -89,7 +90,7 @@ def main():
         "test_emb": test_emb,
         "test_labels": test_labels,
         "test_paths": [str(p) for p in test_ds.paths],
-    }, "/kaggle/working/resnet18_frozen_embeddings.pt")
+    }, "models/resnet18_frozen_embeddings.pt")
 
 
 if __name__ == "__main__":

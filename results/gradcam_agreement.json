@@ -2,665 +2,748 @@
   {
     "image": "data\\bottle\\test\\good\\000.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6514,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.7012,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\001.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6428,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.5281,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\002.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6491,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.5557,
+    "iou_vs_padi_at_0.5": 0.021,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\003.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6484,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.6011,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\004.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6477,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.6587,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\005.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6463,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.6753,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\006.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6448,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.3524,
+    "iou_vs_padi_at_0.5": 0.0242,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\007.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6568,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.6588,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\008.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6533,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.6408,
+    "iou_vs_padi_at_0.5": 0.0045,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\009.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6479,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.5482,
+    "iou_vs_padi_at_0.5": 0.0607,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\010.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6516,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.6638,
+    "iou_vs_padi_at_0.5": 0.0035,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\011.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6525,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.7049,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\012.png",
     "defect_type": "good",
-    "cosine_similarity": 0.656,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.6201,
+    "iou_vs_padi_at_0.5": 0.0034,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\013.png",
     "defect_type": "good",
-    "cosine_similarity": 0.66,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.6513,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\014.png",
     "defect_type": "good",
-    "cosine_similarity": 0.658,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.7016,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\015.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6583,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.3567,
+    "iou_vs_padi_at_0.5": 0.0415,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\016.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6509,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.5972,
+    "iou_vs_padi_at_0.5": 0.0044,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\017.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6705,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.4989,
+    "iou_vs_padi_at_0.5": 0.0393,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\018.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6636,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.5423,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\good\\019.png",
     "defect_type": "good",
-    "cosine_similarity": 0.6677,
-    "iou_at_0.5": null,
-    "iou_at_0.3": null,
-    "iou_at_0.7": null
+    "cosine_similarity": 0.5615,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": null,
+    "iou_vs_gt_at_0.5": null,
+    "iou_vs_gt_at_0.7": null
   },
   {
     "image": "data\\bottle\\test\\broken_large\\000.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7216,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.1253,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4539,
+    "iou_vs_padi_at_0.5": 0.01,
+    "iou_vs_gt_at_0.3": 0.164,
+    "iou_vs_gt_at_0.5": 0.1449,
+    "iou_vs_gt_at_0.7": 0.0403
   },
   {
     "image": "data\\bottle\\test\\broken_large\\001.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.733,
-    "iou_at_0.5": 0.0093,
-    "iou_at_0.3": 0.1883,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4042,
+    "iou_vs_padi_at_0.5": 0.0164,
+    "iou_vs_gt_at_0.3": 0.1335,
+    "iou_vs_gt_at_0.5": 0.1126,
+    "iou_vs_gt_at_0.7": 0.0264
   },
   {
     "image": "data\\bottle\\test\\broken_large\\002.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7832,
-    "iou_at_0.5": 0.0036,
-    "iou_at_0.3": 0.1304,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4857,
+    "iou_vs_padi_at_0.5": 0.1026,
+    "iou_vs_gt_at_0.3": 0.1874,
+    "iou_vs_gt_at_0.5": 0.0565,
+    "iou_vs_gt_at_0.7": 0.0056
   },
   {
     "image": "data\\bottle\\test\\broken_large\\003.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.8162,
-    "iou_at_0.5": 0.002,
-    "iou_at_0.3": 0.0691,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.6223,
+    "iou_vs_padi_at_0.5": 0.0696,
+    "iou_vs_gt_at_0.3": 0.265,
+    "iou_vs_gt_at_0.5": 0.1099,
+    "iou_vs_gt_at_0.7": 0.012
   },
   {
     "image": "data\\bottle\\test\\broken_large\\004.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.704,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.1162,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3163,
+    "iou_vs_padi_at_0.5": 0.0758,
+    "iou_vs_gt_at_0.3": 0.0684,
+    "iou_vs_gt_at_0.5": 0.086,
+    "iou_vs_gt_at_0.7": 0.0289
   },
   {
     "image": "data\\bottle\\test\\broken_large\\005.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.6941,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.1529,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3501,
+    "iou_vs_padi_at_0.5": 0.1553,
+    "iou_vs_gt_at_0.3": 0.0783,
+    "iou_vs_gt_at_0.5": 0.1469,
+    "iou_vs_gt_at_0.7": 0.0584
   },
   {
     "image": "data\\bottle\\test\\broken_large\\006.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7778,
-    "iou_at_0.5": 0.0073,
-    "iou_at_0.3": 0.0928,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4918,
+    "iou_vs_padi_at_0.5": 0.102,
+    "iou_vs_gt_at_0.3": 0.1683,
+    "iou_vs_gt_at_0.5": 0.1078,
+    "iou_vs_gt_at_0.7": 0.0098
   },
   {
     "image": "data\\bottle\\test\\broken_large\\007.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7627,
-    "iou_at_0.5": 0.001,
-    "iou_at_0.3": 0.1167,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4584,
+    "iou_vs_padi_at_0.5": 0.0121,
+    "iou_vs_gt_at_0.3": 0.2277,
+    "iou_vs_gt_at_0.5": 0.0664,
+    "iou_vs_gt_at_0.7": 0.0034
   },
   {
     "image": "data\\bottle\\test\\broken_large\\008.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7709,
-    "iou_at_0.5": 0.0062,
-    "iou_at_0.3": 0.1273,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4835,
+    "iou_vs_padi_at_0.5": 0.1659,
+    "iou_vs_gt_at_0.3": 0.1766,
+    "iou_vs_gt_at_0.5": 0.0461,
+    "iou_vs_gt_at_0.7": 0.0085
   },
   {
     "image": "data\\bottle\\test\\broken_large\\009.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7029,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.0932,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3383,
+    "iou_vs_padi_at_0.5": 0.0194,
+    "iou_vs_gt_at_0.3": 0.0805,
+    "iou_vs_gt_at_0.5": 0.0247,
+    "iou_vs_gt_at_0.7": 0.0009
   },
   {
     "image": "data\\bottle\\test\\broken_large\\010.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7558,
-    "iou_at_0.5": 0.001,
-    "iou_at_0.3": 0.0936,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3951,
+    "iou_vs_padi_at_0.5": 0.0186,
+    "iou_vs_gt_at_0.3": 0.1431,
+    "iou_vs_gt_at_0.5": 0.0687,
+    "iou_vs_gt_at_0.7": 0.0181
   },
   {
     "image": "data\\bottle\\test\\broken_large\\011.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.6913,
-    "iou_at_0.5": 0.0053,
-    "iou_at_0.3": 0.1405,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4049,
+    "iou_vs_padi_at_0.5": 0.0858,
+    "iou_vs_gt_at_0.3": 0.137,
+    "iou_vs_gt_at_0.5": 0.0798,
+    "iou_vs_gt_at_0.7": 0.008
   },
   {
     "image": "data\\bottle\\test\\broken_large\\012.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7168,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.1011,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3987,
+    "iou_vs_padi_at_0.5": 0.0668,
+    "iou_vs_gt_at_0.3": 0.0865,
+    "iou_vs_gt_at_0.5": 0.0318,
+    "iou_vs_gt_at_0.7": 0.0083
   },
   {
     "image": "data\\bottle\\test\\broken_large\\013.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7685,
-    "iou_at_0.5": 0.0046,
-    "iou_at_0.3": 0.1482,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4948,
+    "iou_vs_padi_at_0.5": 0.0545,
+    "iou_vs_gt_at_0.3": 0.1882,
+    "iou_vs_gt_at_0.5": 0.0244,
+    "iou_vs_gt_at_0.7": 0.0024
   },
   {
     "image": "data\\bottle\\test\\broken_large\\014.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.6972,
-    "iou_at_0.5": 0.0016,
-    "iou_at_0.3": 0.1226,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3176,
+    "iou_vs_padi_at_0.5": 0.0399,
+    "iou_vs_gt_at_0.3": 0.0709,
+    "iou_vs_gt_at_0.5": 0.0145,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\broken_large\\015.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7201,
-    "iou_at_0.5": 0.0027,
-    "iou_at_0.3": 0.1184,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4349,
+    "iou_vs_padi_at_0.5": 0.1218,
+    "iou_vs_gt_at_0.3": 0.1455,
+    "iou_vs_gt_at_0.5": 0.0841,
+    "iou_vs_gt_at_0.7": 0.019
   },
   {
     "image": "data\\bottle\\test\\broken_large\\016.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7805,
-    "iou_at_0.5": 0.0065,
-    "iou_at_0.3": 0.1636,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4781,
+    "iou_vs_padi_at_0.5": 0.063,
+    "iou_vs_gt_at_0.3": 0.236,
+    "iou_vs_gt_at_0.5": 0.0438,
+    "iou_vs_gt_at_0.7": 0.0011
   },
   {
     "image": "data\\bottle\\test\\broken_large\\017.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.774,
-    "iou_at_0.5": 0.0148,
-    "iou_at_0.3": 0.1349,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4975,
+    "iou_vs_padi_at_0.5": 0.0696,
+    "iou_vs_gt_at_0.3": 0.2004,
+    "iou_vs_gt_at_0.5": 0.0815,
+    "iou_vs_gt_at_0.7": 0.0155
   },
   {
     "image": "data\\bottle\\test\\broken_large\\018.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7592,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.1421,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.491,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": 0.1784,
+    "iou_vs_gt_at_0.5": 0.0718,
+    "iou_vs_gt_at_0.7": 0.0062
   },
   {
     "image": "data\\bottle\\test\\broken_large\\019.png",
     "defect_type": "broken_large",
-    "cosine_similarity": 0.7435,
-    "iou_at_0.5": 0.0029,
-    "iou_at_0.3": 0.1275,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4547,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": 0.1485,
+    "iou_vs_gt_at_0.5": 0.0214,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\broken_small\\000.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6525,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.1147,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.2821,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": 0.0219,
+    "iou_vs_gt_at_0.5": 0.0,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\broken_small\\001.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6956,
-    "iou_at_0.5": 0.0075,
-    "iou_at_0.3": 0.1918,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.2799,
+    "iou_vs_padi_at_0.5": 0.0221,
+    "iou_vs_gt_at_0.3": 0.0454,
+    "iou_vs_gt_at_0.5": 0.0993,
+    "iou_vs_gt_at_0.7": 0.0959
   },
   {
     "image": "data\\bottle\\test\\broken_small\\002.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6819,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.0913,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3325,
+    "iou_vs_padi_at_0.5": 0.0507,
+    "iou_vs_gt_at_0.3": 0.0622,
+    "iou_vs_gt_at_0.5": 0.0818,
+    "iou_vs_gt_at_0.7": 0.0494
   },
   {
     "image": "data\\bottle\\test\\broken_small\\003.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6584,
-    "iou_at_0.5": 0.0411,
-    "iou_at_0.3": 0.1173,
-    "iou_at_0.7": 0.0152
+    "cosine_similarity": 0.3961,
+    "iou_vs_padi_at_0.5": 0.1174,
+    "iou_vs_gt_at_0.3": 0.1243,
+    "iou_vs_gt_at_0.5": 0.124,
+    "iou_vs_gt_at_0.7": 0.0362
   },
   {
     "image": "data\\bottle\\test\\broken_small\\004.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.7044,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.1949,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3451,
+    "iou_vs_padi_at_0.5": 0.2083,
+    "iou_vs_gt_at_0.3": 0.1193,
+    "iou_vs_gt_at_0.5": 0.0507,
+    "iou_vs_gt_at_0.7": 0.0102
   },
   {
     "image": "data\\bottle\\test\\broken_small\\005.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6624,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.1597,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3071,
+    "iou_vs_padi_at_0.5": 0.0,
+    "iou_vs_gt_at_0.3": 0.1143,
+    "iou_vs_gt_at_0.5": 0.0,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\broken_small\\006.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6903,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.2259,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.278,
+    "iou_vs_padi_at_0.5": 0.0408,
+    "iou_vs_gt_at_0.3": 0.0499,
+    "iou_vs_gt_at_0.5": 0.0902,
+    "iou_vs_gt_at_0.7": 0.067
   },
   {
     "image": "data\\bottle\\test\\broken_small\\007.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6582,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.0809,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.2824,
+    "iou_vs_padi_at_0.5": 0.0167,
+    "iou_vs_gt_at_0.3": 0.0441,
+    "iou_vs_gt_at_0.5": 0.0263,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\broken_small\\008.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6857,
-    "iou_at_0.5": 0.0016,
-    "iou_at_0.3": 0.1126,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4432,
+    "iou_vs_padi_at_0.5": 0.121,
+    "iou_vs_gt_at_0.3": 0.0786,
+    "iou_vs_gt_at_0.5": 0.144,
+    "iou_vs_gt_at_0.7": 0.0443
   },
   {
     "image": "data\\bottle\\test\\broken_small\\009.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6746,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.1509,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.2821,
+    "iou_vs_padi_at_0.5": 0.1026,
+    "iou_vs_gt_at_0.3": 0.064,
+    "iou_vs_gt_at_0.5": 0.0632,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\broken_small\\010.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.7158,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.1818,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3572,
+    "iou_vs_padi_at_0.5": 0.1067,
+    "iou_vs_gt_at_0.3": 0.082,
+    "iou_vs_gt_at_0.5": 0.2263,
+    "iou_vs_gt_at_0.7": 0.065
   },
   {
     "image": "data\\bottle\\test\\broken_small\\011.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6801,
-    "iou_at_0.5": 0.0026,
-    "iou_at_0.3": 0.1337,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3088,
+    "iou_vs_padi_at_0.5": 0.0718,
+    "iou_vs_gt_at_0.3": 0.049,
+    "iou_vs_gt_at_0.5": 0.0475,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\broken_small\\012.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.7272,
-    "iou_at_0.5": 0.0022,
-    "iou_at_0.3": 0.1923,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3877,
+    "iou_vs_padi_at_0.5": 0.0719,
+    "iou_vs_gt_at_0.3": 0.1303,
+    "iou_vs_gt_at_0.5": 0.0372,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\broken_small\\013.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6998,
-    "iou_at_0.5": 0.0092,
-    "iou_at_0.3": 0.1274,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.2932,
+    "iou_vs_padi_at_0.5": 0.0125,
+    "iou_vs_gt_at_0.3": 0.1101,
+    "iou_vs_gt_at_0.5": 0.0065,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\broken_small\\014.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6743,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.1229,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.28,
+    "iou_vs_padi_at_0.5": 0.0499,
+    "iou_vs_gt_at_0.3": 0.0221,
+    "iou_vs_gt_at_0.5": 0.0297,
+    "iou_vs_gt_at_0.7": 0.0054
   },
   {
     "image": "data\\bottle\\test\\broken_small\\015.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6739,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.074,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3993,
+    "iou_vs_padi_at_0.5": 0.0217,
+    "iou_vs_gt_at_0.3": 0.0524,
+    "iou_vs_gt_at_0.5": 0.0468,
+    "iou_vs_gt_at_0.7": 0.016
   },
   {
     "image": "data\\bottle\\test\\broken_small\\016.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.6919,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.1382,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3085,
+    "iou_vs_padi_at_0.5": 0.1512,
+    "iou_vs_gt_at_0.3": 0.0477,
+    "iou_vs_gt_at_0.5": 0.1101,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\broken_small\\017.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.7013,
-    "iou_at_0.5": 0.0028,
-    "iou_at_0.3": 0.1049,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.2935,
+    "iou_vs_padi_at_0.5": 0.0117,
+    "iou_vs_gt_at_0.3": 0.0447,
+    "iou_vs_gt_at_0.5": 0.0629,
+    "iou_vs_gt_at_0.7": 0.0664
   },
   {
     "image": "data\\bottle\\test\\broken_small\\018.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.7176,
-    "iou_at_0.5": 0.001,
-    "iou_at_0.3": 0.1735,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4076,
+    "iou_vs_padi_at_0.5": 0.1859,
+    "iou_vs_gt_at_0.3": 0.1228,
+    "iou_vs_gt_at_0.5": 0.1439,
+    "iou_vs_gt_at_0.7": 0.0157
   },
   {
     "image": "data\\bottle\\test\\broken_small\\019.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.707,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.2381,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3247,
+    "iou_vs_padi_at_0.5": 0.1816,
+    "iou_vs_gt_at_0.3": 0.1207,
+    "iou_vs_gt_at_0.5": 0.0569,
+    "iou_vs_gt_at_0.7": 0.0083
   },
   {
     "image": "data\\bottle\\test\\broken_small\\020.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.7034,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.0627,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3865,
+    "iou_vs_padi_at_0.5": 0.0878,
+    "iou_vs_gt_at_0.3": 0.0649,
+    "iou_vs_gt_at_0.5": 0.1566,
+    "iou_vs_gt_at_0.7": 0.0015
   },
   {
     "image": "data\\bottle\\test\\broken_small\\021.png",
     "defect_type": "broken_small",
-    "cosine_similarity": 0.7386,
-    "iou_at_0.5": 0.1348,
-    "iou_at_0.3": 0.2132,
-    "iou_at_0.7": 0.0431
+    "cosine_similarity": 0.3268,
+    "iou_vs_padi_at_0.5": 0.0617,
+    "iou_vs_gt_at_0.3": 0.1019,
+    "iou_vs_gt_at_0.5": 0.1667,
+    "iou_vs_gt_at_0.7": 0.0671
   },
   {
     "image": "data\\bottle\\test\\contamination\\000.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.7426,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.0237,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4201,
+    "iou_vs_padi_at_0.5": 0.1465,
+    "iou_vs_gt_at_0.3": 0.0912,
+    "iou_vs_gt_at_0.5": 0.0827,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\contamination\\001.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.7016,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.0127,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.4384,
+    "iou_vs_padi_at_0.5": 0.0214,
+    "iou_vs_gt_at_0.3": 0.1126,
+    "iou_vs_gt_at_0.5": 0.033,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\contamination\\002.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.6423,
-    "iou_at_0.5": 0.1843,
-    "iou_at_0.3": 0.2302,
-    "iou_at_0.7": 0.0668
+    "cosine_similarity": 0.3506,
+    "iou_vs_padi_at_0.5": 0.0746,
+    "iou_vs_gt_at_0.3": 0.0671,
+    "iou_vs_gt_at_0.5": 0.257,
+    "iou_vs_gt_at_0.7": 0.1893
   },
   {
     "image": "data\\bottle\\test\\contamination\\003.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.6792,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.0253,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.441,
+    "iou_vs_padi_at_0.5": 0.0173,
+    "iou_vs_gt_at_0.3": 0.0273,
+    "iou_vs_gt_at_0.5": 0.0061,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\contamination\\004.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.6661,
-    "iou_at_0.5": 0.0155,
-    "iou_at_0.3": 0.1098,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3393,
+    "iou_vs_padi_at_0.5": 0.0048,
+    "iou_vs_gt_at_0.3": 0.0344,
+    "iou_vs_gt_at_0.5": 0.0168,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\contamination\\005.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.7259,
-    "iou_at_0.5": 0.0047,
-    "iou_at_0.3": 0.0948,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.484,
+    "iou_vs_padi_at_0.5": 0.1387,
+    "iou_vs_gt_at_0.3": 0.2188,
+    "iou_vs_gt_at_0.5": 0.1468,
+    "iou_vs_gt_at_0.7": 0.0008
   },
   {
     "image": "data\\bottle\\test\\contamination\\006.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.7319,
-    "iou_at_0.5": 0.0339,
-    "iou_at_0.3": 0.0966,
-    "iou_at_0.7": 0.0073
+    "cosine_similarity": 0.5491,
+    "iou_vs_padi_at_0.5": 0.044,
+    "iou_vs_gt_at_0.3": 0.3256,
+    "iou_vs_gt_at_0.5": 0.2114,
+    "iou_vs_gt_at_0.7": 0.062
   },
   {
     "image": "data\\bottle\\test\\contamination\\007.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.7302,
-    "iou_at_0.5": 0.0512,
-    "iou_at_0.3": 0.4149,
-    "iou_at_0.7": 0.0189
+    "cosine_similarity": 0.5602,
+    "iou_vs_padi_at_0.5": 0.1909,
+    "iou_vs_gt_at_0.3": 0.2473,
+    "iou_vs_gt_at_0.5": 0.3904,
+    "iou_vs_gt_at_0.7": 0.1188
   },
   {
     "image": "data\\bottle\\test\\contamination\\008.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.7406,
-    "iou_at_0.5": 0.0146,
-    "iou_at_0.3": 0.0613,
-    "iou_at_0.7": 0.0055
+    "cosine_similarity": 0.4046,
+    "iou_vs_padi_at_0.5": 0.1339,
+    "iou_vs_gt_at_0.3": 0.1239,
+    "iou_vs_gt_at_0.5": 0.0125,
+    "iou_vs_gt_at_0.7": 0.0011
   },
   {
     "image": "data\\bottle\\test\\contamination\\009.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.7221,
-    "iou_at_0.5": 0.0052,
-    "iou_at_0.3": 0.0845,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3832,
+    "iou_vs_padi_at_0.5": 0.1119,
+    "iou_vs_gt_at_0.3": 0.101,
+    "iou_vs_gt_at_0.5": 0.0134,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\contamination\\010.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.7449,
-    "iou_at_0.5": 0.0054,
-    "iou_at_0.3": 0.1344,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.5072,
+    "iou_vs_padi_at_0.5": 0.0531,
+    "iou_vs_gt_at_0.3": 0.1716,
+    "iou_vs_gt_at_0.5": 0.0129,
+    "iou_vs_gt_at_0.7": 0.0
   },
   {
     "image": "data\\bottle\\test\\contamination\\011.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.702,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.0165,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.5881,
+    "iou_vs_padi_at_0.5": 0.12,
+    "iou_vs_gt_at_0.3": 0.2572,
+    "iou_vs_gt_at_0.5": 0.3132,
+    "iou_vs_gt_at_0.7": 0.1117
   },
   {
     "image": "data\\bottle\\test\\contamination\\012.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.6914,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.0,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.562,
+    "iou_vs_padi_at_0.5": 0.045,
+    "iou_vs_gt_at_0.3": 0.3002,
+    "iou_vs_gt_at_0.5": 0.284,
+    "iou_vs_gt_at_0.7": 0.0707
   },
   {
     "image": "data\\bottle\\test\\contamination\\013.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.6001,
-    "iou_at_0.5": 0.0566,
-    "iou_at_0.3": 0.0726,
-    "iou_at_0.7": 0.0254
+    "cosine_similarity": 0.3907,
+    "iou_vs_padi_at_0.5": 0.0831,
+    "iou_vs_gt_at_0.3": 0.1089,
+    "iou_vs_gt_at_0.5": 0.1235,
+    "iou_vs_gt_at_0.7": 0.0542
   },
   {
     "image": "data\\bottle\\test\\contamination\\014.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.5949,
-    "iou_at_0.5": 0.074,
-    "iou_at_0.3": 0.073,
-    "iou_at_0.7": 0.0554
+    "cosine_similarity": 0.408,
+    "iou_vs_padi_at_0.5": 0.6034,
+    "iou_vs_gt_at_0.3": 0.095,
+    "iou_vs_gt_at_0.5": 0.101,
+    "iou_vs_gt_at_0.7": 0.0734
   },
   {
     "image": "data\\bottle\\test\\contamination\\015.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.5814,
-    "iou_at_0.5": 0.045,
-    "iou_at_0.3": 0.0699,
-    "iou_at_0.7": 0.0133
+    "cosine_similarity": 0.3736,
+    "iou_vs_padi_at_0.5": 0.0609,
+    "iou_vs_gt_at_0.3": 0.0831,
+    "iou_vs_gt_at_0.5": 0.1119,
+    "iou_vs_gt_at_0.7": 0.0325
   },
   {
     "image": "data\\bottle\\test\\contamination\\016.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.6959,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.0,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.49,
+    "iou_vs_padi_at_0.5": 0.012,
+    "iou_vs_gt_at_0.3": 0.1717,
+    "iou_vs_gt_at_0.5": 0.128,
+    "iou_vs_gt_at_0.7": 0.0567
   },
   {
     "image": "data\\bottle\\test\\contamination\\017.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.5992,
-    "iou_at_0.5": 0.038,
-    "iou_at_0.3": 0.1115,
-    "iou_at_0.7": 0.0139
+    "cosine_similarity": 0.416,
+    "iou_vs_padi_at_0.5": 0.1679,
+    "iou_vs_gt_at_0.3": 0.1629,
+    "iou_vs_gt_at_0.5": 0.1689,
+    "iou_vs_gt_at_0.7": 0.0606
   },
   {
     "image": "data\\bottle\\test\\contamination\\018.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.6002,
-    "iou_at_0.5": 0.1742,
-    "iou_at_0.3": 0.0996,
-    "iou_at_0.7": 0.103
+    "cosine_similarity": 0.3995,
+    "iou_vs_padi_at_0.5": 0.0642,
+    "iou_vs_gt_at_0.3": 0.051,
+    "iou_vs_gt_at_0.5": 0.2756,
+    "iou_vs_gt_at_0.7": 0.2732
   },
   {
     "image": "data\\bottle\\test\\contamination\\019.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.6482,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.0251,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.3037,
+    "iou_vs_padi_at_0.5": 0.082,
+    "iou_vs_gt_at_0.3": 0.0346,
+    "iou_vs_gt_at_0.5": 0.0443,
+    "iou_vs_gt_at_0.7": 0.0175
   },
   {
     "image": "data\\bottle\\test\\contamination\\020.png",
     "defect_type": "contamination",
-    "cosine_similarity": 0.693,
-    "iou_at_0.5": 0.0,
-    "iou_at_0.3": 0.0,
-    "iou_at_0.7": 0.0
+    "cosine_similarity": 0.5462,
+    "iou_vs_padi_at_0.5": 0.1153,
+    "iou_vs_gt_at_0.3": 0.2709,
+    "iou_vs_gt_at_0.5": 0.2537,
+    "iou_vs_gt_at_0.7": 0.1251
   }
 ]

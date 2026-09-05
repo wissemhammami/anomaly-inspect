@@ -4,14 +4,14 @@ import numpy as np
 from pathlib import Path
 from PIL import Image
 from torch.utils.data import Dataset, DataLoader
-from torchvision.models import resnet18, ResNet18_Weights
-from sklearn.metrics import roc_auc_score
+from src.evaluation.gradcam_eval import MODEL_PATH, load_model
+from sklearn.metrics import roc_auc_score, average_precision_score
 import torch.nn.functional as F
 
 IMAGENET_MEAN = np.array([0.485, 0.456, 0.406], dtype=np.float32)
 IMAGENET_STD = np.array([0.229, 0.224, 0.225], dtype=np.float32)
 IMG_SIZE = 224
-ROOT = "/kaggle/input/datasets/ipythonx/mvtec-ad/bottle"
+ROOT = str(MODEL_PATH.parents[1] / "data" / "bottle")
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
@@ -63,9 +63,7 @@ class TestWithMasks(Dataset):
         return image, mask, defect_type
 
 
-backbone = resnet18(weights=ResNet18_Weights.IMAGENET1K_V1).to(DEVICE).eval()
-for p in backbone.parameters():
-    p.requires_grad = False
+backbone = load_model(DEVICE)
 
 feat_store = {}
 
@@ -129,9 +127,12 @@ all_pixel_scores = np.concatenate(all_pixel_scores)
 all_pixel_labels = np.concatenate(all_pixel_labels)
 
 pixel_auroc = roc_auc_score(all_pixel_labels, all_pixel_scores)
+pixel_pr_auc = average_precision_score(all_pixel_labels, all_pixel_scores)
 print(f"pixel-level ROC-AUC: {pixel_auroc:.4f}")
+print(f"pixel-level PR-AUC:  {pixel_pr_auc:.4f}")
 
 torch.save({
     "mean": mean, "cov_inv": cov_inv, "H": H, "W": W, "C": C,
     "pixel_auroc": pixel_auroc,
-}, "/kaggle/working/localization_stats.pt")
+    "pixel_pr_auc": pixel_pr_auc,
+}, MODEL_PATH.parent / "localization_stats.pt")

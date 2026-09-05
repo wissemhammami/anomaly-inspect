@@ -1,3 +1,4 @@
+import os
 import torch
 import torch.nn as nn
 import torchvision.models as models
@@ -9,7 +10,7 @@ from torch.utils.data import Dataset, DataLoader
 IMAGENET_MEAN = np.array([0.485, 0.456, 0.406], dtype=np.float32)
 IMAGENET_STD = np.array([0.229, 0.224, 0.225], dtype=np.float32)
 IMG_SIZE = 224
-ROOT = "/kaggle/input/datasets/ipythonx/mvtec-ad/bottle"
+ROOT = os.environ.get("MVTEC_DATA_ROOT", "data/bottle")
 
 
 def load_image(path):
@@ -111,7 +112,7 @@ def main():
     net = build_finetune_model(device)
     train(net, train_loader, device, epochs, lr)
 
-    torch.save(net.state_dict(), "/kaggle/working/resnet18_finetuned.pt")
+    torch.save(net.state_dict(), "models/resnet18_finetuned.pt")
 
     train_emb, train_labels = extract_embeddings(net, eval_train_loader, device)
     test_emb, test_labels = extract_embeddings(net, test_loader, device)
@@ -126,7 +127,7 @@ def main():
         "test_emb": test_emb,
         "test_labels": test_labels,
         "test_paths": [str(p) for p in test_ds.paths],
-    }, "/kaggle/working/resnet18_finetuned_embeddings.pt")
+    }, "models/resnet18_finetuned_embeddings.pt")
 
 
 if __name__ == "__main__":

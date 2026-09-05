@@ -45,7 +45,7 @@ class GradCAMAnomaly(nn.Module):
             return np.zeros_like(cam)
         return cam / denom
 
-    def forward(self, x):
+    def forward(self, x, topk_fraction=0.1):
         x = x.to(self.device)
         self.model.zero_grad()
         self.activations = None
@@ -58,7 +58,10 @@ class GradCAMAnomaly(nn.Module):
 
         captured_tensor = self.activations
         score_map = self._mahalanobis_map(captured_tensor)
-        score = score_map.max()
+
+        k = max(1, int(score_map.numel() * topk_fraction))
+        score = torch.topk(score_map.flatten(), k).values.mean()
+
         grad = torch.autograd.grad(score, captured_tensor, retain_graph=False, allow_unused=False)[0]
 
         weights = grad.mean(dim=(2, 3), keepdim=True)
