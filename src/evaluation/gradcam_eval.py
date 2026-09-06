@@ -7,7 +7,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 from PIL import Image
-from torchvision.models import ResNet18_Weights, resnet18
+from torchvision.models import resnet18
 
 from src.models.gradcam import GradCAMAnomaly
 
@@ -84,7 +84,7 @@ def collect_sample_paths():
 
 
 def load_model(device):
-    model = resnet18(weights=ResNet18_Weights.IMAGENET1K_V1)
+    model = resnet18(weights=None)
     state = torch.load(MODEL_PATH, map_location=device, weights_only=False)
     filtered = {k: v for k, v in state.items() if not k.startswith("fc.")}
     model.load_state_dict(filtered, strict=False)
