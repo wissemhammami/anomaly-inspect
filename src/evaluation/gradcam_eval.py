@@ -103,14 +103,15 @@ def padi_map_for_image(model, image_tensor, stats):
         out = model.layer1(out)
         out = model.layer2(out)
 
-    feat = out[0].permute(1, 2, 0).reshape(-1, out.shape[1]).cpu().numpy()
-    mean = stats["mean"].astype(np.float32)
-    cov_inv = stats["cov_inv"].astype(np.float32)
-    scores = np.zeros(feat.shape[0], dtype=np.float32)
-    for pos in range(feat.shape[0]):
-        diff = feat[pos] - mean[pos]
-        scores[pos] = diff @ cov_inv[pos] @ diff
-    return scores.reshape(28, 28)
+    h, w = out.shape[-2:]
+    feat = out[0].permute(1, 2, 0).reshape(-1, out.shape[1])  # (HW, C)
+
+    mean = torch.as_tensor(stats["mean"], dtype=torch.float32, device=feat.device)
+    cov_inv = torch.as_tensor(stats["cov_inv"], dtype=torch.float32, device=feat.device)
+
+    diff = feat - mean  # (HW, C)
+    scores = torch.einsum("pc,pcd,pd->p", diff, cov_inv, diff)  # (HW,)
+    return scores.reshape(h, w).cpu().numpy()
 
 
 def main():
