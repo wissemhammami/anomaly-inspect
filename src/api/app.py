@@ -7,6 +7,7 @@ import cv2
 import numpy as np
 import torch
 from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image, UnidentifiedImageError
 
 from src.evaluation.anomaly_detection import fit_gaussian, mahalanobis_scores
@@ -25,6 +26,13 @@ EMBEDDINGS_PATH = PROJECT_ROOT / "models" / "resnet18_finetuned_embeddings.pt"
 THRESHOLD_PATH = PROJECT_ROOT / "results" / "anomaly_detection_comparison.json"
 
 app = FastAPI(title="Anomaly Inspection API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 _model = None
 _gradcam = None
