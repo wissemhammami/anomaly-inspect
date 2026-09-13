@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anomaly Inspect — Bottle Defect Detection</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --card-border: #262b36;
+    --text: #e8eaf0;
+    --text-dim: #9aa1b2;
+    --accent: #6366f1;
+    --accent-hover: #7678f5;
+    --ok: #22c55e;
+    --bad: #ef4444;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 50% -10%, #1b1f2a 0%, var(--bg) 60%);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 16px 80px;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 36px; }
+  header h1 {
+    font-size: 28px;
+    margin: 0 0 8px;
+    background: linear-gradient(90deg, #a5b4fc, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+  header p {
+    color: var(--text-dim);
+    font-size: 15px;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  }
+  .dropzone {
+    border: 2px dashed #3a3f4d;
+    border-radius: 12px;
+    padding: 36px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .dropzone:hover, .dropzone.drag { border-color: var(--accent); background: rgba(99,102,241,0.06); }
+  .dropzone svg { width: 40px; height: 40px; color: var(--text-dim); margin-bottom: 10px; }
+  .dropzone p { margin: 4px 0; color: var(--text-dim); font-size: 14px; }
+  .dropzone p.main { color: var(--text); font-size: 15px; font-weight: 500; }
+  input[type=file] { display: none; }
+
+  .preview-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .preview-row img {
+    width: 96px; height: 96px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--card-border);
+  }
+  .preview-info { flex: 1; font-size: 14px; color: var(--text-dim); }
+  .preview-info b { color: var(--text); }
+
+  .samples { margin-top: 18px; }
+  .samples p { font-size: 13px; color: var(--text-dim); margin: 0 0 8px; }
+  .sample-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    margin: 0 8px 8px 0;
+    border-radius: 999px;
+    border: 1px solid var(--card-border);
+    background: #1e222c;
+    color: var(--text);
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .sample-btn:hover { background: #262b38; border-color: var(--accent); }
+
+  .predict-btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: var(--accent);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, opacity 0.15s;
+  }
+  .predict-btn:hover:not(:disabled) { background: var(--accent-hover); }
+  .predict-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .status {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 14px;
+    margin-top: 14px;
+    min-height: 20px;
+  }
+  .spinner {
+    display: inline-block;
+    width: 14px; height: 14px;
+    border: 2px solid var(--card-border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .results { display: none; }
+  .badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .badge {
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+  .badge.ok { background: rgba(34,197,94,0.15); color: var(--ok); border: 1px solid rgba(34,197,94,0.4); }
+  .badge.bad { background: rgba(239,68,68,0.15); color: var(--bad); border: 1px solid rgba(239,68,68,0.4); }
+  .score { color: var(--text-dim); font-size: 14px; }
+
+  .img-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 560px) { .img-grid { grid-template-columns: 1fr; } }
+  .img-card { text-align: center; }
+  .img-card img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--card-border);
+    display: block;
+  }
+  .img-card span {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  .error-box {
+    display: none;
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.35);
+    color: #fca5a5;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 16px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Anomaly Inspect</h1>
+    <p>Upload a photo of a bottle and this model — a fine-tuned ResNet-18 with PaDiM-style localization and Grad-CAM explainability — will flag manufacturing defects and show you exactly where it's looking.</p>
+  </header>
+
+  <div class="card">
+    <div class="dropzone" id="dropzone">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 8.25 12 3.75m0 0L7.5 8.25M12 3.75v13.5" />
+      </svg>
+      <p class="main">Drop an image here, or click to browse</p>
+      <p>PNG or JPG — a clear photo of a single bottle works best</p>
+      <input type="file" id="fileInput" accept="image/*">
+    </div>
+
+    <div class="preview-row" id="previewRow" style="display:none;">
+      <img id="previewImg" alt="preview">
+      <div class="preview-info"><b id="fileName"></b><br>ready to check</div>
+    </div>
+
+    <div class="samples">
+      <p>Or try a sample image:</p>
+      <button class="sample-btn" data-sample="good">Good bottle</button>
+      <button class="sample-btn" data-sample="defect">Defective bottle</button>
+    </div>
+
+    <button class="predict-btn" id="predictBtn" disabled>Check for Defects</button>
+    <div class="status" id="status"></div>
+    <div class="error-box" id="errorBox"></div>
+  </div>
+
+  <div class="card results" id="resultsCard">
+    <div class="badge-row">
+      <span class="badge" id="verdictBadge">—</span>
+      <span class="score" id="scoreText"></span>
+    </div>
+    <div class="img-grid">
+      <div class="img-card">
+        <img id="padiImg" alt="PaDiM localization map">
+        <span>PaDiM localization map</span>
+      </div>
+      <div class="img-card">
+        <img id="gradcamImg" alt="Grad-CAM overlay">
+        <span>Grad-CAM overlay</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Built with PaDiM + ResNet-18 + Grad-CAM &middot;
+    <a href="https://github.com/wissemhammami/anomaly-inspect" target="_blank">View on GitHub</a>
+  </footer>
+</div>
+
+<script>
+  const API_URL = "https://anomaly-inspect-1.onrender.com/predict";
+  const SAMPLE_URLS = {
+    good: "https://raw.githubusercontent.com/wissemhammami/anomaly-inspect/main/tests/fixtures/sample_good.png",
+    defect: "https://raw.githubusercontent.com/wissemhammami/anomaly-inspect/main/tests/fixtures/sample_defect.png"
+  };
+
+  const dropzone = document.getElementById("dropzone");
+  const fileInput = document.getElementById("fileInput");
+  const previewRow = document.getElementById("previewRow");
+  const previewImg = document.getElementById("previewImg");
+  const fileNameEl = document.getElementById("fileName");
+  const predictBtn = document.getElementById("predictBtn");
+  const statusEl = document.getElementById("status");
+  const errorBox = document.getElementById("errorBox");
+  const resultsCard = document.getElementById("resultsCard");
+  const verdictBadge = document.getElementById("verdictBadge");
+  const scoreText = document.getElementById("scoreText");
+  const padiImg = document.getElementById("padiImg");
+  const gradcamImg = document.getElementById("gradcamImg");
+
+  let selectedFile = null;
+
+  function setFile(file) {
+    selectedFile = file;
+    const url = URL.createObjectURL(file);
+    previewImg.src = url;
+    fileNameEl.textContent = file.name;
+    previewRow.style.display = "flex";
+    predictBtn.disabled = false;
+    errorBox.style.display = "none";
+  }
+
+  dropzone.addEventListener("click", () => fileInput.click());
+  fileInput.addEventListener("change", (e) => {
+    if (e.target.files.length) setFile(e.target.files[0]);
+  });
+
+  ["dragenter", "dragover"].forEach(evt =>
+    dropzone.addEventListener(evt, (e) => { e.preventDefault(); dropzone.classList.add("drag"); })
+  );
+  ["dragleave", "drop"].forEach(evt =>
+    dropzone.addEventListener(evt, (e) => { e.preventDefault(); dropzone.classList.remove("drag"); })
+  );
+  dropzone.addEventListener("drop", (e) => {
+    if (e.dataTransfer.files.length) setFile(e.dataTransfer.files[0]);
+  });
+
+  document.querySelectorAll(".sample-btn").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const key = btn.dataset.sample;
+      statusEl.textContent = "Loading sample image…";
+      try {
+        const res = await fetch(SAMPLE_URLS[key]);
+        const blob = await res.blob();
+        const file = new File([blob], `sample_${key}.png`, { type: blob.type || "image/png" });
+        setFile(file);
+        statusEl.textContent = "";
+      } catch (err) {
+        statusEl.textContent = "";
+        showError("Could not load the sample image.");
+      }
+    });
+  });
+
+  function showError(msg) {
+    errorBox.textContent = msg;
+    errorBox.style.display = "block";
+  }
+
+  predictBtn.addEventListener("click", async () => {
+    if (!selectedFile) return;
+    predictBtn.disabled = true;
+    errorBox.style.display = "none";
+    resultsCard.style.display = "none";
+    statusEl.innerHTML = '<span class="spinner"></span>Analyzing image — first request after idle time can take up to a minute while the model wakes up…';
+
+    const formData = new FormData();
+    formData.append("file", selectedFile);
+
+    try {
+      const response = await fetch(API_URL, { method: "POST", body: formData });
+      if (!response.ok) {
+        const errBody = await response.json().catch(() => ({}));
+        throw new Error(errBody.detail || `Request failed (${response.status})`);
+      }
+      const data = await response.json();
+
+      const isAnomalous = data.is_anomalous;
+      verdictBadge.textContent = isAnomalous ? "ANOMALOUS" : "OK";
+      verdictBadge.className = "badge " + (isAnomalous ? "bad" : "ok");
+      scoreText.textContent = "score: " + Number(data.anomaly_score).toLocaleString(undefined, { maximumFractionDigits: 0 });
+
+      padiImg.src = "data:image/png;base64," + data.pixel_localization_map_base64;
+      gradcamImg.src = "data:image/png;base64," + data.gradcam_overlay_base64;
+
+      resultsCard.style.display = "block";
+      statusEl.textContent = "";
+    } catch (err) {
+      statusEl.textContent = "";
+      showError(err.message || "Something went wrong. Please try again.");
+    } finally {
+      predictBtn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
