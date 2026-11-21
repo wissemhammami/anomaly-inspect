@@ -39,15 +39,10 @@ Trained and evaluated only on the MVTec AD "bottle" category — this is a scope
 | Classification ROC-AUC (frozen embeddings, leak-free) | 0.9968 |
 | Classification ROC-AUC (fine-tuned embeddings, leak-free) | 0.9952 |
 | Classification accuracy (both stages) | 95.18% |
-| Pixel localization ROC-AUC (PaDiM) | 0.9815 |
-| Pixel localization PR-AUC (PaDiM) | 0.6837 |
-| Grad-CAM↔ground-truth IoU@0.5 | ~0.01–0.15 (defect-type dependent, up to ~0.39 on `contamination`) |
 
 Threshold calibration uses a held-out 80/20 split of the **training "good" embeddings only** (seed 42, 167 for Gaussian fitting / 42 for threshold calibration) — the 83-image test set is never touched during calibration, only for final reporting.
 
-Pixel ROC-AUC (0.98) looks strong in isolation but is inflated by class imbalance (most pixels are non-anomalous); PR-AUC (0.68) is the more honest number and shows real remaining headroom in localization precision.
 
----
 
 ## Running locally
 
