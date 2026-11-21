@@ -73,12 +73,10 @@ CI (`.github/workflows/docker_build.yml`) builds the image, health-checks it, an
 ## Known limitations / lessons learned
 
 - **Threshold leakage was a real early bug.** An earlier version calibrated the anomaly threshold using test-set labels, inflating reported accuracy. Fixed by calibrating only on a held-out split of training "good" embeddings — the numbers above reflect the corrected, leak-free evaluation.
-- **ROC-AUC alone hid weak localization precision.** Pixel-level PaDiM localization looked strong under ROC-AUC (0.98) but PR-AUC (0.68) — the more honest metric under class imbalance — shows real room for improvement. Both are reported rather than only the flattering one.
-- **Grad-CAM localization is the weakest link in the pipeline.** Even after fixing the backprop target (switched from the single max-activation pixel to a top-10%-mean over the score map, which meaningfully improved IoU-vs-ground-truth), agreement with ground-truth defect masks is still modest (~0.01–0.4 depending on defect type). This is stated here directly rather than hidden — a legitimate area for further work (e.g. Grad-CAM++, full multi-layer PaDiM).
-- **PaDiM assumes spatially aligned inputs.** MVTec bottle images are well-centered so this wasn't prioritized, but it's a real constraint for deployment on less-controlled real-world images.
-- **No formal three-way train/val/test split.** The test set currently does double duty for both PaDiM/localization work and final reporting; a fully separate validation set would be a more rigorous setup if this project continues to evolve.
 
----
+- **PaDiM assumes spatially aligned inputs.** MVTec bottle images are well-centered so this wasn't prioritized, but it's a real constraint for deployment on less-controlled real-world images.
+
+
 
 ## Deployment notes
 
